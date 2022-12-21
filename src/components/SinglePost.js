@@ -16,16 +16,14 @@ function SinglePost() {
   const { id } = useParams();
 
   useEffect(() => {
-    if (id) dispatch(getPostById(id));
-  }, [id]);
-
-  console.log(listSinglePost);
+    dispatch(getPostById(id));
+  }, []);
 
   return (
     <div>
       <h2>SinglePost</h2>
-      <h5>{listSinglePost.title}</h5>
-      <h6>{listSinglePost.body}</h6>
+      <h5>{listSinglePost && listSinglePost.title}</h5>
+      <h6>{listSinglePost && listSinglePost.body}</h6>
     </div>
   );
 }

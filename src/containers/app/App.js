@@ -6,7 +6,7 @@ import SinglePost from "components/SinglePost";
 import { store, sagaMiddleware } from "providers/store";
 import rootSaga from "middleware/sagas";
 
-import "./App.css";
+import "./App.scss";
 
 sagaMiddleware.run(rootSaga);
 
